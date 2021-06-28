@@ -465,6 +465,19 @@
                                 <div class="error-message"></div>
                                 <div class="sent-message">Your message has been sent. Thank you!</div>
                             </div>
+                            <script>
+                              window.watsonAssistantChatOptions = {
+                                  integrationID: "49095e25-d47a-473b-89b9-dbc9a1d40c84", // The ID of this integration.
+                                  region: "us-south", // The region your integration is hosted in.
+                                  serviceInstanceID: "3af933e7-949b-4b8d-9fdf-4bfc546a9c91", // The ID of your service instance.
+                                  onLoad: function(instance) { instance.render(); }
+                                };
+                              setTimeout(function(){
+                                const t=document.createElement('script');
+                                t.src="https://web-chat.global.assistant.watson.appdomain.cloud/loadWatsonAssistantChat.js";
+                                document.head.appendChild(t);
+                              });
+                            </script>
                             <div class="text-center"><button type="submit">Send Message</button></div>
                         </form>
                     </div>
@@ -514,20 +527,6 @@
     <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
-        
-    <script>
-    window.watsonAssistantChatOptions = {
-      integrationID: "49095e25-d47a-473b-89b9-dbc9a1d40c84", // The ID of this integration.
-      region: "us-south", // The region your integration is hosted in.
-      serviceInstanceID: "3af933e7-949b-4b8d-9fdf-4bfc546a9c91", // The ID of your service instance.
-      onLoad: function(instance) { instance.render(); }
-    };
-    setTimeout(function(){
-    const t=document.createElement('script');
-    t.src="https://web-chat.global.assistant.watson.appdomain.cloud/loadWatsonAssistantChat.js";
-    document.head.appendChild(t);
-    });
-    </script>
         
 </body>
 
