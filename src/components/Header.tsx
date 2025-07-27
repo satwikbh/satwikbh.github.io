@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Github, Linkedin, Mail, Download } from "lucide-react";
+import { ThemeToggle } from "@/components/theme-toggle";
 
 const Header = () => {
   return (
@@ -18,7 +19,8 @@ const Header = () => {
             <a href="#contact" className="text-foreground hover:text-primary transition-colors">Contact</a>
           </div>
 
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center space-x-2">
+            <ThemeToggle />
             <Button variant="ghost" size="icon" asChild>
               <a href="https://github.com/satwikbh" target="_blank" rel="noopener noreferrer">
                 <Github className="h-5 w-5" />
